@@ -1,0 +1,19 @@
+name: cut
+on: [ push ]
+
+jobs:
+    cut:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@v4
+            -   name: Cut
+                run: java Cutter.java **/*.9.png
+            -   name: Deploy
+                uses: stefanzweifel/git-auto-commit-action@v5
+                with:
+                    commit_message: 'Update 9-patch'
+                    branch: '9patch'
+                    push_options: '--force'
