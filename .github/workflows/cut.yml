@@ -10,7 +10,9 @@ jobs:
             -   name: Checkout repository
                 uses: actions/checkout@v4
             -   name: Cut
-                run: java Cutter.java **/*.9.png
+                run: |
+                    shopt -s globstar
+                    java Cutter.java **/*.9.png
             -   name: Deploy
                 uses: stefanzweifel/git-auto-commit-action@v5
                 with:
