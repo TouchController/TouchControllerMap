@@ -1,0 +1,9 @@
+{
+    "gray_when_active": false,
+    "fallback": {
+        "chat_simple": "chat",
+        "emote_simple": "emote",
+        "jump_flying": "jump",
+        "sneak_secret": "sneak"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "gray_when_active": true,
+    "fallback": {
+        "ascend_swimming": "ascend",
+        "descend_swimming": "descend",
+        "jump_horse": "jump",
+        "sneak_horse": "sneak"
+    }
+}
